@@ -91,6 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const quizElement = document.getElementById('quiz');
     const questionElement = document.getElementById('question');
     const optionsElement = document.getElementById('options');
+    const countdownElement = document.getElementById('countdown');
     const gameOverElement = document.getElementById('gameOver');
     const saveBtn = document.getElementById('saveBtn');
     const initialsInput = document.getElementById('initials');
@@ -98,7 +99,8 @@ document.addEventListener('DOMContentLoaded', () => {
   
     let currentQuestion = 0;
     let score = 0;
-    let countdownValue = 60; // Set your countdown value here
+    let countdownValue = 60;
+    let countdownDuration = 60; 
     let countdownTimer;
   
     function startQuiz() {
@@ -146,6 +148,8 @@ document.addEventListener('DOMContentLoaded', () => {
         endQuiz();
       }
     }
+
+   
   
     function endQuiz() {
       quizElement.style.display = 'none';
@@ -166,4 +170,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   
     startBtn.addEventListener('click', startQuiz);
+
+  
+
+   
   });
+ 
